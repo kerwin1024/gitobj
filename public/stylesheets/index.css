@@ -1,0 +1,33 @@
+.box {
+    border: 1px solid #2ea4e3;
+    margin: 10px;
+    padding: 10px;
+}
+
+.color {
+    color: red;
+}
+
+.redbox {
+    border: 1px solid red;
+    margin: 10px;
+    padding: 10px;
+}
+
+#div-1 > p {
+    border: 1px solid blue;
+    margin: 10px;
+    padding: 10px;
+}
+
+#one {
+    color: red;
+}
+
+#two {
+    color: green;
+}
+
+#three {
+    color: blue;
+}
