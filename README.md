@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-ÏîÄ¿½éÉÜ
+This test upload file.
 =======
 # gitobj
 gitobj
