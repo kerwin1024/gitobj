@@ -13,7 +13,7 @@ function do_attr() {
         return title;
     }).each(function () {
         $(this).html("title属性与下一个id属性取值" + this.title);
-    })
+    });
 }
 
 function do_removeAttr() {
@@ -34,7 +34,7 @@ $(function () {
     });
     var cnt = 1;
     $("#div-1 p#three").click(function () {
-        $(this).toggleClass("redbox", cnt++ % 3 == 0);
+        $(this).toggleClass("redbox", cnt++ % 3 === 0);
     });
 })();
 

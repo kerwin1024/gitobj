@@ -41,6 +41,21 @@ module.exports = function (grunt) {
                     dest: 'public/images/'
                 }]
             }
+        },
+        //检查JavaScript语法
+        jshint: {
+            all: ['Gruntfile.js',
+                'public/javascripts/index.js',
+                'public/javascripts/jquery_event.js'
+            ]
+        },
+        //最小化、混淆、合并 JavaScript 文件
+        uglify: {
+            bulid: {
+                //src: 'src/<%= pkg.name %>.js'，
+                src: 'public/javascripts/*.js',
+                dest: 'public/build/javascripts/<%= pkg.name %>.min.js'
+            }
         }
     });
 
@@ -50,14 +65,16 @@ module.exports = function (grunt) {
         'grunt-contrib-imagemin',
         'grunt-contrib-csslint',
         'grunt-contrib-concat',
-        'grunt-contrib-cssmin'
+        'grunt-contrib-cssmin',
+        'grunt-contrib-jshint',
+        'grunt-contrib-uglify'
     ].forEach(function (task) {
         grunt.loadNpmTasks(task);
     });
     //默认任务用于后端（服务器端）
     //grunt.registerInitTask('default', []);
     //静态任务用于前端静态资源
-    grunt.registerInitTask('static', ['csslint', 'concat', 'cssmin', 'imagemin']);
+    grunt.registerInitTask('static', ['csslint', 'concat', 'cssmin', 'imagemin','jshint','uglify']);
     //监控
     //grunt.registerInitTask('watch',['watch']);
 };

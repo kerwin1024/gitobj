@@ -13,9 +13,21 @@
     margin: 10px;
     padding: 10px;
 }
-#div-1>p{
+
+#div-1 > p {
     border: 1px solid blue;
     margin: 10px;
     padding: 10px;
 }
 
+#one {
+    color: red;
+}
+
+#two {
+    color: green;
+}
+
+#three {
+    color: blue;
+}
