@@ -56,6 +56,24 @@ module.exports = function (grunt) {
                 src: 'public/javascripts/*.js',
                 dest: 'public/build/javascripts/<%= pkg.name %>.min.js'
             }
+        },
+        //监控
+        watch: {
+            css: {
+                files: 'public/stylesheets/*.css',
+                tasks: ['csslint'],
+                options: {
+                    livereload: true,
+                    spawn: false
+                }
+            },
+            scripts: {
+                files: 'public/javascripts/*.js',
+                tasks: ['jshint'],
+                options: {
+                    spawn: false
+                }
+            }
         }
     });
 
@@ -67,14 +85,15 @@ module.exports = function (grunt) {
         'grunt-contrib-concat',
         'grunt-contrib-cssmin',
         'grunt-contrib-jshint',
-        'grunt-contrib-uglify'
+        'grunt-contrib-uglify',
+        'grunt-contrib-watch'
     ].forEach(function (task) {
         grunt.loadNpmTasks(task);
     });
     //默认任务用于后端（服务器端）
-    //grunt.registerInitTask('default', []);
+    grunt.registerInitTask('default', ['watch']);
     //静态任务用于前端静态资源
     grunt.registerInitTask('static', ['csslint', 'concat', 'cssmin', 'imagemin','jshint','uglify']);
     //监控
-    //grunt.registerInitTask('watch',['watch']);
+    // grunt.registerInitTask('watch',['watch']);
 };

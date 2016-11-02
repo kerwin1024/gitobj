@@ -1,0 +1,33 @@
+#draggablel{
+    width:100px;
+    height:100px;
+    color:white;
+    background: red;
+}
+
+#draggablel,#sortable {
+    border: 1px solid #000000;
+    padding: 5px;
+    width: 80px;
+    list-style: none;
+    position: static;
+}
+#draggablel li,
+#sortable li{
+    border: solid 1px #d0d0d0;
+    paddig: 5px;
+    margin:5px;
+    background: #e2e2e2;
+}
+#selectable li{
+    height:20px;
+    width:100px;
+    display: block;
+    list-style: none;
+}
+.selectable .ui-selecting{
+    background: red;
+}
+.selectable .ui-selected{
+    background: blue;
+}

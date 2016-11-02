@@ -1,7 +1,16 @@
 var express = require('express');
 var app = express();
+
+//设置handelbars 视图引擎
+
+var handlebars = require('express-handlebars').create({defaultLayout:'main'});
+app.engine('handlebars',handlebars.engine);
+app.set('view engine','handlebars');
+
 var favicon = require('serve-favicon');
 var path = require('path');
+var users = require('./routes/users');
+app.use('/users',users);    
 
 //body-parer
 app.use(require('body-parser')());
@@ -10,7 +19,7 @@ app.use(require('body-parser')());
 app.set('port',process.env.PORT || 3006);
 
 //静态资源
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '../public'));
 //图标
 //app.use(favicon(path.join(__dirname,'/public','favicon.ico')));
 

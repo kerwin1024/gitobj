@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Back to top</title>
+    <style>
+        .contents {
+            height: 1200px;
+        }
+
+        .back_to_top {
+            opacity: 0;
+            position: fixed;
+            right: 80px;
+            bottom: 120px;
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-bottom: 26px solid #0c9cff;
+            cursor: pointer;
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+
+        .back_to_top:after {
+            content: "";
+            width: 12px;
+            height: 26px;
+            position: absolute;
+            border: 0 solid transparent;
+            border-right: 8px solid #0c9cff;
+            border-radius: 0 0 20px 0;
+            top: 26px;
+            left: -16px;
+        }
+        button{
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+<div class="contents">
+    <h1>CONTENTS</h1>
+</div>
+<div id="backToTop" class="back_to_top">
+</div>
+<div class="test">
+
+    <button>click</button>
+</div>
+<script type="text/javascript" src="http://www.daixiaorui.com/Public/js/jquery.min.js"></script>
+<script>
+    //控制backToTop显示&隐藏
+    $(function () {
+        $(window).scroll(function () {
+            if ($(window).scrollTop() <= 200) {
+                $("#backToTop").css("opacity", "0");
+            } else {
+                $("#backToTop").css("opacity", "1");
+            }
+        });
+    });
+
+    //返回顶部方法
+    function goTop() {
+        $("html,body").animate({scrollTop: 0}, 500);
+    }
+    $("#backToTop").click(goTop);
+    
+
+</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!--jqueryui 拖动效果-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/grag.css">
+    <link rel="stylesheet" href="vender/jqueryUI1.2.1/jquery-ui.min.css">
+    <link rel="stylesheet" href="vender/jqueryUI1.2.1/jquery-ui.theme.min.css">
+</head>
+<body>
+<div id="draggable1">拖拽
+    <img src="images/eg_car.jpg" id="img_three"/>
+</div>
+
+<table style="padding: 5px 20px">
+    <tr>
+        <td style="padding: 5px 20px;vertical-align: top">
+            <ul id="draggable">
+                <li>item1</li>
+                <li>item2</li>
+                <li>item3</li>
+            </ul>
+        </td>
+        <td style="padding: 5px 20px;vertical-align: top">
+            <ul id="sortable">
+                <li class="listTitle">SortList</li>
+            </ul>
+        </td>
+        <td style="padding: 5px 20px;vertical-align: top">
+            <div id="result"></div>
+        </td>
+    </tr>
+</table>
+<ul id="selectable">
+    <li class="ui-widget-content">选择项</li>
+    <li class="selectableLI">选择项</li>
+    <li class="selectableLI">选择项</li>
+    <li class="selectableLI">选择项</li>
+    <li class="selectableLI">选择项</li>
+    <li class="selectableLI">选择项</li>
+</ul>
+<ul id="ul-sortable">
+    <li>111111111</li>
+    <li>111111111</li>
+    <li>111111111</li>
+    <li>111111111</li>
+    <li>111111111</li>
+    <li>111111111</li>
+</ul>
+
+<div id="accordion">
+    <h3>梦回红楼梦</h3>
+    <div>
+        <ul>
+            <li>wenwenzizifafa</li>
+            <li>wenwenzizifafa</li>
+            <li>wenwenzizifafa</li>
+            <li>wenwenzizifafa</li>
+            <li>wenwenzizifafa</li>
+        </ul>
+    </div>
+</div>
+<div id="accordion1">
+    <h3>梦回红楼梦</h3>
+    <div>
+        <ul>
+            <li>wenwenzizifafa</li>
+            <li>wenwenzizifafa</li>
+            <li>wenwenzizifafa</li>
+            <li>wenwenzizifafa</li>
+            <li>wenwenzizifafa</li>
+        </ul>
+    </div>
+    <h3>梦回红楼梦</h3>
+    <div>
+        <ul>
+            <li>wenwenzizifafa</li>
+            <li>wenwenzizifafa</li>
+            <li>wenwenzizifafa</li>
+            <li>wenwenzizifafa</li>
+            <li>wenwenzizifafa</li>
+        </ul>
+    </div>
+    <h3>梦回红楼梦</h3>
+    </div>
+
+<button id="opener">注册</button>
+    <div id="dialog" title="注册">
+        <form action="" method="post">
+            <p>
+                <label>账号</label>
+                <input type="text" name="username">
+            </p>
+            <p>
+                <label>密码</label>
+                <input type="password" name="password">
+            </p>
+            <input type="submit" value="注册">
+        </form>
+    </div>
+
+
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">红楼</a></li>
+        <li><a href="#tabs-2">三国</a></li>
+        <li><a href="#tabs-3">水浒</a></li>
+    </ul>
+    <div id="tabs-1">
+        <ul>
+            <li><a href="#" target="_blank">xxxxxxxxxxxxxx</a></li>
+            <li><a href="#" target="_blank">xxxxxxxxxxxxxx</a></li>
+            <li><a href="#" target="_blank">xxxxxxxxxxxxxx</a></li>
+            <li><a href="#" target="_blank">xxxxxxxxxxxxxx</a></li>
+            <li><a href="#" target="_blank">xxxxxxxxxxxxxx</a></li>
+        </ul>
+    </div>
+    <div id="tabs-2">
+        <ul>
+            <li><a href="#" target="_blank">yyyyyyyyyyyyyyy</a></li>
+            <li><a href="#" target="_blank">yyyyyyyyyyyyyyy</a></li>
+            <li><a href="#" target="_blank">yyyyyyyyyyyyyyy</a></li>
+            <li><a href="#" target="_blank">yyyyyyyyyyyyyyy</a></li>
+            <li><a href="#" target="_blank">yyyyyyyyyyyyyyy</a></li>
+        </ul>
+    </div>
+    <div id="tabs-3">
+        <ul>
+            <li><a href="#" target="_blank">zzzzzzzzzzzzzzz</a></li>
+            <li><a href="#" target="_blank">zzzzzzzzzzzzzzz</a></li>
+            <li><a href="#" target="_blank">zzzzzzzzzzzzzzz</a></li>
+            <li><a href="#" target="_blank">zzzzzzzzzzzzzzz</a></li>
+            <li><a href="#" target="_blank">zzzzzzzzzzzzzzz</a></li>
+        </ul>
+    </div>
+</div>
+<div id="progressbar"></div>
+<p>
+    <label for="">自动完成</label>
+    <input type="text" id="autocomplete">
+</p>
+<script src="vender/jquery/dist/jquery.js"></script>
+<script src="vender/jqueryUI1.2.1/jquery-ui.min.js"></script>
+<script src="javascripts/grag.js"></script>
+</body>
+</html>

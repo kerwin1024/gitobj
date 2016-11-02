@@ -1,0 +1,12 @@
+.selectableLi{
+    height:20px;
+    width:100px;
+    display: block;
+    list-style: none;
+}
+.selectableLi .ui-selecting{
+    background: red;
+}
+.selectableLi .ui-selected{
+    background: blue;
+}

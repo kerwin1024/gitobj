@@ -32,14 +32,52 @@ $(function () {
 $(function () {
     $("#img_toggle").toggle(
         function () {
-            $("#img_toggle").attr("src", "../imgages/SC01C02.jpg");
+            $("#img_toggle").attr("src", "../images/SC01C02.jpg");
         },
         function () {
-            $("#img_toggle").attr("src", "../imgages/SC01C03.jpg");
+            $("#img_toggle").attr("src", "../images/SC01C03.jpg");
         },
         function () {
-            $("#img_toggle").attr("src", "../imgages/SC01C04.jpg");
+            $("#img_toggle").attr("src", "../images/SC01C04.jpg");
         }
     );
 
 });
+
+$(function () {
+    $("#mouse_img_one").mouseover(function () {
+        $(this).attr("src", "../images/SC01C04.jpg");
+    });
+    $("#mouse_img_one").mouseout(function () {
+        $(this).attr("src", "../images/SC01C01.jpg");
+    });
+    $("#mouse_img_two").mouseover(function () {
+        $(this).attr("src", "../images/SC01C05.jpg");
+    });
+    $("#mouse_img_two").mouseout(function () {
+        $(this).attr("src", "../images/SC01C02.jpg");
+    });
+    $("#mouse_img_three").mouseover(function () {
+        $(this).attr("src", "../images/SC01C05.jpg");
+    });
+    $("#mouse_img_three").mouseout(function () {
+        $(this).attr("src", "../images/SC01C03.jpg");
+    });
+});
+
+$("#img_hover").hover(
+    function () {
+        $("#img_hover").attr("src", "../images/SC01C01.jpg")
+    },
+    function () {
+        $("#img_hover").attr("src", "../images/SC01C02.jpg")
+    }
+);
+
+function getToTopLength() {
+    if ($(window).scroll()) {
+        $(window).scroll(function () {
+            console.log($(this).scrollTop());
+        });
+    }
+}
