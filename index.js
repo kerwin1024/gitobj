@@ -21,14 +21,31 @@ app.set('port',process.env.PORT || 3006);
 //静态资源
 app.use(express.static(__dirname + '../public'));
 //图标
-//app.use(favicon(path.join(__dirname,'/public','favicon.ico')));
+app.use(favicon(path.join(__dirname,'/public','favicon.ico')));
 
 //路由
 app.get('/',function(req,res){
     res.type('text/html');
-    res.send('<span style=color:green>Welcome to my site</span>')
+    res.send('<span style="color:green">Welcome to my site</span>')
 });
 
+// jsonp
+app.get('/getinfo', function (req, res) {
+    var _callback = req.query.callback;
+    var _data = {
+            phone: '17623202231',
+            name: 'Bill Node.js'
+        };
+    if (_callback) {
+        res.type('text/javascript');
+        //JSON.stingify(obj)#把对象转换成json格式的字符串
+        //JSON.parse(str)#把字符串转换成对象
+        res.send(_callback + '(' + JSON.stringify(_data) + ')');
+    }
+    else {
+        res.json(_data);
+    }
+});
 //404
 app.use(function(req,res){
     res.type('text/html');
